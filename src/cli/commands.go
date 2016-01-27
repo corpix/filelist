@@ -9,7 +9,7 @@ var (
 		{
 			Name:      "filter",
 			ShortName: "f",
-			Usage:     "filter files in a directory with specified globbing configuration",
+			Usage:     "Filter files in a directory with specified globbing configuration",
 			Flags:     filterFlags,
 			Action:    filterAction,
 		},

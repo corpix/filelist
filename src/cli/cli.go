@@ -12,7 +12,7 @@ import (
 
 var (
 	logLevel log.Level
-	version  string
+	version  = "0.0.0-dev"
 )
 
 func getLogLevel(c *cli.Context) error {
