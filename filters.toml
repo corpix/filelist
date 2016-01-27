@@ -1,0 +1,8 @@
+Excludes = [
+        "**/.git/**",
+        "**/Godeps/**"
+]
+
+Includes = [
+         "**.go"
+]
