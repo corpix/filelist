@@ -39,7 +39,7 @@ GLOBAL OPTIONS:
 
 ## Filtering
 You need a config with the filters. You could find one in the repository root:
-```toml
+```
 $ go-filelist:master  cat filters.toml
 Excludes = [
     "**/.git/**",
