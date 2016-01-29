@@ -7,7 +7,7 @@ LDFLAGS = \
 tests =
 -include "parameters.mk"
 
-.PHONY = all $(NAME) release hooks test
+.PHONY: all $(NAME) release hooks test
 
 all: hooks
 	go get github.com/nsf/gocode
