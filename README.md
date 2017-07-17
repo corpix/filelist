@@ -1,6 +1,8 @@
 filelist
 --------
 
+[![Build Status](https://travis-ci.org/corpix/filelist.svg?branch=master)](https://travis-ci.org/corpix/filelist)
+
 Simple tool that creates filtered lists of files.
 
 # Initial run
