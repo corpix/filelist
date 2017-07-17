@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/corpix/go-filelist/src/cli"
+	"github.com/corpix/filelist/cli"
 )
 
 func main() { cli.Run() }

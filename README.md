@@ -1,15 +1,13 @@
-go-filelist
------------
+filelist
+--------
 
 Simple tool that creates filtered lists of files.
-
-**IT IS IN ALPHA STATE NOW, API CHANGES ARE COMMING**
 
 # Initial run
 * Make sure you have typical golang directory structure
 * Make sure your GOPATH is ok
-* Make `go get github.com/corpix/go-filelist`
-* Run `go-filelist -h` or `go run main.go -h` in `GOROOT/src/github.com/corpix/go-filelist`
+* Make `go get github.com/corpix/filelist`
+* Run `filelist -h` or `go run main.go -h` in `GOROOT/src/github.com/corpix/filelist`
 
 It should print a help for you:
 
@@ -21,7 +19,7 @@ USAGE:
    main [global options] command [command options] [arguments...]
 
 VERSION:
-   0.0.0-dev
+   development
 
 AUTHOR(S):
    Dmitry Moskowski <me@corpix.ru>
@@ -40,7 +38,7 @@ GLOBAL OPTIONS:
 ## Filtering
 You need a config with the filters. You could find one in the repository root:
 ```
-$ go-filelist:master  cat filters.toml
+$ cat filters.toml
 Excludes = [
     "**/.git/**",
     "**/Godeps/**"
@@ -51,17 +49,17 @@ Includes = [
 ]
 ```
 
-Lets run go-filelist with this filter on `src` directory:
+Lets run `filelist` with this filter on `src` directory:
 ```bash
-$ go-filelist:master  go run main.go filter --config=filters.toml src
-/home/corpix/go/src/github.com/corpix/go-filelist/src
-/home/corpix/go/src/github.com/corpix/go-filelist/src/cli
-/home/corpix/go/src/github.com/corpix/go-filelist/src/cli/actions.go
-/home/corpix/go/src/github.com/corpix/go-filelist/src/cli/cli.go
-/home/corpix/go/src/github.com/corpix/go-filelist/src/cli/commands.go
-/home/corpix/go/src/github.com/corpix/go-filelist/src/cli/flags.go
-/home/corpix/go/src/github.com/corpix/go-filelist/src/config
-/home/corpix/go/src/github.com/corpix/go-filelist/src/config/config.go
-/home/corpix/go/src/github.com/corpix/go-filelist/src/matcher
-/home/corpix/go/src/github.com/corpix/go-filelist/src/matcher/matcher.go
+$ go run filelist/filelist.go filter --config=filters.toml src
+/home/corpix/go/src/github.com/corpix/filelist
+/home/corpix/go/src/github.com/corpix/filelist/cli
+/home/corpix/go/src/github.com/corpix/filelist/cli/actions.go
+/home/corpix/go/src/github.com/corpix/filelist/cli/cli.go
+/home/corpix/go/src/github.com/corpix/filelist/cli/commands.go
+/home/corpix/go/src/github.com/corpix/filelist/cli/flags.go
+/home/corpix/go/src/github.com/corpix/filelist/config
+/home/corpix/go/src/github.com/corpix/filelist/config/config.go
+/home/corpix/go/src/github.com/corpix/filelist/matcher
+/home/corpix/go/src/github.com/corpix/filelist/matcher/matcher.go
 ```

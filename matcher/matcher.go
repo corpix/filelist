@@ -15,18 +15,6 @@ func (f *Matcher) Match(s string) bool {
 	return false
 }
 
-// func (f *Matcher) Do(fs []string) []string {
-// 	res := make([]string, len(fs))
-// 	iter := 0
-// 	for _, v := range fs {
-// 		if f.Match(v) {
-// 			res[iter] = v
-// 			iter++
-// 		}
-// 	}
-// 	return res
-// }
-
 func New(fs []string) *Matcher {
 	f := &Matcher{make([]glob.Glob, len(fs))}
 	for i, v := range fs {

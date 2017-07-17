@@ -2,9 +2,10 @@ package config
 
 import (
 	"encoding/json"
+	"path/filepath"
+
 	"github.com/BurntSushi/toml"
 	log "github.com/Sirupsen/logrus"
-	"path/filepath"
 )
 
 var current *Config

@@ -2,12 +2,14 @@ package cli
 
 import (
 	"fmt"
-	log "github.com/Sirupsen/logrus"
-	"github.com/codegangsta/cli"
-	"github.com/corpix/go-filelist/src/config"
-	"github.com/corpix/go-filelist/src/matcher"
 	"os"
 	"path/filepath"
+
+	log "github.com/Sirupsen/logrus"
+	"github.com/urfave/cli"
+
+	"github.com/corpix/filelist/config"
+	"github.com/corpix/filelist/matcher"
 )
 
 const (

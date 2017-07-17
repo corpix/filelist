@@ -2,17 +2,18 @@ package cli
 
 import (
 	"fmt"
-	log "github.com/Sirupsen/logrus"
-	"github.com/codegangsta/cli"
 	"os"
 	"os/signal"
 	"path"
 	"syscall"
+
+	log "github.com/Sirupsen/logrus"
+	"github.com/urfave/cli"
 )
 
 var (
 	logLevel log.Level
-	version  = "0.0.0-dev"
+	version  = "development"
 )
 
 func getLogLevel(c *cli.Context) error {
